@@ -47,6 +47,20 @@ body {
     max-width: 320px;
 }
 
+.faq__logo {
+    background: url('images/bg-pattern-mobile.svg') center bottom no-repeat;
+    background-color: transparent;
+    margin: 0 auto;
+    max-width: 300px;
+    padding: 0;
+    margin-top: -157px;
+}
+
+.faq__logo__image {
+    margin-left: -13px;
+    margin-bottom: 13px;
+}
+
 .faq__heading { 
     color: var(--blue-dark);
     font-size: 3.2rem;
