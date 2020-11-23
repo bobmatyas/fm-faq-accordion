@@ -2,7 +2,11 @@
     
     /* colors */
     --purple: #7276e1;
-    
+    --orange: hsl(14, 88%, 65%);
+    --blue-dark: hsl(238, 29%, 16%);
+    --grey-light: hsl(237, 12%, 33%);
+    --blue-mid: hsl(240, 6%, 50%);
+
     /* fonts */
     --font: 'Kumbh Sans', sans-serif;
     --base-font-size: 1.2rem;
@@ -39,32 +43,102 @@ body {
     border-radius: 25px;
     padding: 50px 25px;
     margin: 5%;
-    min-width: 300px;
-    max-width: 300px;
+    min-width: 320px;
+    max-width: 320px;
 }
 
 .faq__heading { 
+    color: var(--blue-dark);
+    font-size: 3.2rem;
+    font-weight: 700;
     text-align: center; 
 }
 
 .faq__detail {
     border-bottom: 1px solid hsl(240, 5%, 91%);
-    margin: 10px 0;
-    padding: 5px 0;
+    margin: 20px 0 0 0;
+    padding: 5px 0 20px 0;
 }
 
-.faq__detail:hover,
-.faq__detail:active { cursor: pointer; }
+.faq__summary:hover,
+.faq__summary:active { 
+    color: var(--orange);
+    cursor: pointer; 
+}
 
 .faq__detail[open] > .faq__summary { 
     font-weight: 700; 
 }
 
+details > summary {
+    list-style: none;
+  }
+  details > summary::-webkit-details-marker {
+    display: none;
+  }
+
+details summary { 
+    display: block;
+    padding: 0 0 25px 0;
+    position: relative;
+    text-align: right;
+        background-image: url("images/icon-arrow-down.svg");
+    background-repeat: no-repeat;
+    background-position: center right;
+    text-align: right;
+}
+
+details:not(open) summary::after {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    content: "";
+    padding-bottom: 0;
+    background-image: url("images/icon-arrow-down.svg");
+    background-repeat: no-repeat;
+    background-position: center right;
+    transform: scaleY(-1);
+    text-align: right;
+}
+
+
+details:is(open) summary::after {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    content: "";
+    background-image: url("images/icon-arrow-down.svg");
+    background-repeat: no-repeat;
+    background-position: center right;
+    transform: scaleY(90);
+    text-align: right;
+}
+
+.faq__question {
+    left: 0;
+    position: absolute;
+    text-align: left;
+    top: 0;
+    width: 90%;
+}
+
+.faq__question {
+    display: inline-block;
+    margin: 5px 0;
+    text-align: left;
+    width: 90%;
+}
+
 .faq__summary {
-    font-size: var(--base-font-size); 
+    color: var(--blue-dark);
+    font-size: 1.4rem; 
 }
 
 .faq__text {
-    font-size: var(--base-font-size);   
+    color: var(--blue-mid);
+    font-size: var(--base-font-size);
+    line-height: 1.6;
+    margin: 10px 0 0 0;
 }
+
 
