@@ -142,7 +142,8 @@ details[open] .faq__summary:after {
     font-size: 1.4rem; 
 }
 
-.faq__summary:focus { 
+.faq__summary:focus {
+    color: var(--orange); 
     font-weight: bold;
     outline: none;
 }
@@ -168,17 +169,6 @@ details[open] .faq__summary:after {
         padding: 0;
         margin: 0;
     }
-
-    /*
-    .faq__logo__holder {
-        background-image: url('images/bg-pattern-desktop.svg');
-        background-color: #fff;
-        background-attachment: fixed;
-        background-position-y: -20px;
-        background-repeat: no-repeat;
-        height: 100%;
-    }
-    */
 
     .faq__logo__holder { 
         display: flex;
@@ -209,12 +199,25 @@ details[open] .faq__summary:after {
         position: relative;
     }
 
+    .faq__heading {
+        text-align: left;
+    }
+
     .hidden-lg { display: none; }
 
     .visible-lg { 
         display: block; 
         position: absolute;
-        top: 270px;
+        margin-top: 120px;
         left: -80px;    
+    }
+
+    .faq__text {
+        margin: 0 0 10px 0;
+    }
+
+    .faq__detail {
+        margin: 10px 0 0 0 0;
+        padding: 0;
     }
 }
