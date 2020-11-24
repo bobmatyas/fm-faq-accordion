@@ -25,24 +25,25 @@
 
 html {
     font-size: 10px;
-    background-image: linear-gradient(-180deg,  hsl(273, 75%, 66%),hsl(240, 73%, 65%)); 
 }
 
 body { 
     align-items: center;
+    background-image: linear-gradient(-180deg,  hsl(273, 75%, 66%),hsl(240, 73%, 65%)); 
     display: flex;
     flex-direction: column;
     font-family: var(--font);
     font-weight: 400;
+    height: 100vh;
     justify-content: center;
-    height: 100vh; 
+    padding: 0;
 }
 
 .faq { 
     background-color: #fff;
     border-radius: 25px;
     padding: 50px 25px;
-    margin: 5%;
+    margin: 150px 5% 5% 5%;
     min-width: 320px;
     max-width: 320px;
 }
@@ -153,4 +154,54 @@ details[open] .faq__summary:after {
     margin: 10px 0 0 0;
 }
 
+.hidden-lg { display: block; }
+    
+.visible-lg { display: none; }
 
+
+@media (min-width: 900px) {
+    .faq {
+        align-items: center;
+        background-image: url('images/bg-pattern-desktop.svg');
+        background-color: #fff;
+        background-position: -530px -315px;
+        background-size: initial;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: space-between;
+        min-width: 900px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .faq__holder {
+        margin: 0 50px;
+        padding: 70px 0;
+        max-width: 350px;
+        width: 350px;
+    }
+
+    .faq__logo {
+        display: flex;
+        align-items: center;
+        background-image: url('images/illustration-woman-online-desktop.svg');
+        background-position-x: -75px;
+        background-size: cover;
+        height: 385px;
+        min-width: 300px;
+        margin: 0;
+        padding: 0;
+        width: 525px;
+        max-width: 500px;
+        position: relative;
+    }
+
+    .hidden-lg { display: none; }
+
+    .visible-lg { 
+        display: block; 
+        position: absolute;
+        top: 160px;
+        left: -80px;    
+    }
+}
